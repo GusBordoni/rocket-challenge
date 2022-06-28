@@ -14,33 +14,43 @@
 
 body {
     background-color: var(--light-purple);
-    display: flex;
+/*     display: flex;
     flex-direction: column;
     width: 100vw;
-}
+ */}
 
 header {
-    background-color: var(--dark-bg);
-    display: grid;
-    grid-template-areas: 
-    "nav nav"
-    "desc photo";
-    grid-template-rows: minmax(100px,1fr) minmax(300px, 3fr);
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    color: var(--white);
-}
+    background-color: #170027;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+  }
 
-nav {
-    grid-area: nav;
-    background-color: rgba(255, 0, 0, 0.1);
-}
+  nav {
+    background-color: rgba(45, 97, 192, 0.377);
+    color: white;
+    height: 100px;
+    width: 100%;
+  }
 
-#intro-desc {
-    grid-area: desc;
-    background-color: rgba(145, 255, 0, 0.1);
-}
+  #intro {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-#intro-photo {
-    grid-area: photo;
-    background-color: rgba(0, 102, 255, 0.1);
-}
+  #intro-desc {
+    flex: 50%;
+    background-color: rgba(192, 45, 148, 0.377);
+  }
+
+  #intro-photo {
+    flex: 50%;
+    background-color: rgba(69, 192, 45, 0.377);
+  }
+
+  @media only screen and (max-width: 480px) {
+    #intro-desc, #intro-photo {
+        flex: 100%;
+    }
+  }
