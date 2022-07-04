@@ -21,6 +21,8 @@ header {
     display: flex;
     flex-wrap: wrap;
     flex-direction:row;
+    padding: 0 8%;
+    justify-content: center;
 }
 
 nav {
@@ -28,13 +30,14 @@ nav {
     color: white;
     height: 100px;
     width: 100%;
+    max-width: 1400px;
 }
 
 #intro {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
+    max-width: 1400px;
 }
 
 #intro-desc {
@@ -50,11 +53,12 @@ nav {
     display: flex;
     flex: 50%;
     background-color: rgba(69, 192, 45, 0.377);
+    justify-content: flex-end;
 }
 
 #intro-photo img {
   max-width: 100%;
-  min-width: 463px;
+  height: fit-content;
 }
 
 
@@ -64,6 +68,8 @@ main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  padding: 0 8%;
+  justify-content: center;
 }
 
 
@@ -74,14 +80,21 @@ main {
   display: flex;
   flex-wrap: wrap;
   background-color: rgba(192, 45, 148, 0.377);
+  max-width: 1400px;
 }
 
 #main-posts .post {
-  flex: 50%
+  flex: 50%;
+  padding: 25px;
+
 }
 
 .post > p:nth-child(2) {
   color: red;
+}
+
+#main-posts > div:nth-child(1) > img:nth-child(1) {
+  max-width: 100%;
 }
 
 .no-photo > img:nth-child(1){
@@ -100,14 +113,30 @@ main {
   display: flex;
   flex-wrap: wrap;
   background-color: rgba(69, 192, 45, 0.377);
+  max-width: 1400px;
 }
 
 .old-post {
   flex: 33%;
+  padding: 25px;
 }
 
-@media only screen and (max-width: 480px) {
-    #intro-desc, #intro-photo, .old-post, .with-photo, .no-photo  {
+.old-post > img {
+  max-width: 100%;
+}
+
+
+@media only screen and (max-width: 576px) {
+    header, main {
+      padding: 0;
+    }
+    #intro-desc, .old-post, .with-photo, .no-photo, #main-posts .post, #main-photoless {
         flex: 100%;
+    }
+    #intro-photo {
+      display: none;
+    }
+    #intro {
+      flex-wrap: wrap;
     }
 }
