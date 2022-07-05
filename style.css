@@ -30,20 +30,63 @@ nav {
     color: white;
     height: 100px;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1245px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
+
+.navbar-links > ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.navbar-links li {
+  padding: 10px;
+}
+
+.navbar-links a:link, .navbar-links a:visited {
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* ------------------------------------------------ */
+nav form { 
+  display: flex;
+}
+
+nav input[type=search] {
+  border: none;
+  border-radius: 5px 0 0 5px;
+  padding: 10px;
+  background-color: var(--purple-bg);
+  color: var(--white);
+  width: 150px;
+}
+
+nav button[type=submit] {
+  border: none;
+  border-radius: 0 5px 5px 0;
+  padding: 10px;
+  background-color: var(--button-bg);
+}
+
+
+/* ------------------------------------------------- */
+
 
 #intro {
     width: 100%;
     display: flex;
     flex-direction: row;
-    max-width: 1400px;
+    max-width: 1245px;
 }
 
 #intro-desc {
     display: flex;
     flex-direction: column;
-    padding: 25px;
+    padding: 25px 85px 25px 25px;
     flex: 50%;
     background-color: rgba(192, 45, 148, 0.377);
 }
@@ -80,7 +123,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   background-color: rgba(192, 45, 148, 0.377);
-  max-width: 1400px;
+  max-width: 1245px;
 }
 
 #main-posts .post {
@@ -104,6 +147,7 @@ main {
 #main-photoless {
   background-color: rgba(180, 45, 192, 0.377);
   flex: 50%;
+  padding: 0 0 0 60px;
 }
 
 
@@ -113,7 +157,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   background-color: rgba(69, 192, 45, 0.377);
-  max-width: 1400px;
+  max-width: 1245px;
 }
 
 .old-post {
@@ -125,6 +169,45 @@ main {
   max-width: 100%;
 }
 
+footer {
+  margin-top: auto;
+  display: flex;
+  background-color: var(--dark-bg);
+  height: 5rem;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font: 18px Arial;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar-links {
+      display: none;
+      top: 100px;
+      position: absolute;
+      left: 0;
+      background-color: black;
+      width: 100%;
+    }
+    .navbar-links ul {
+      display: unset;
+    }
+    .navbar-links li {
+      padding: 25px;
+      border-top: 1px solid var(--white);
+    }
+    .navbar-links li:last-child {
+      border-bottom: 1px solid var(--white);
+    }
+    
+    #searchField {
+      display: none;
+    }
+    nav button[type="submit"] {
+      border-radius: 100%;
+    }
+
+}
 
 @media only screen and (max-width: 576px) {
     header, main {
@@ -132,6 +215,12 @@ main {
     }
     #intro-desc, .old-post, .with-photo, .no-photo, #main-posts .post, #main-photoless {
         flex: 100%;
+    }
+    #main-photoless {
+      padding: 0;
+    }
+    #intro-desc {
+      padding: 25px;
     }
     #intro-photo {
       display: none;
