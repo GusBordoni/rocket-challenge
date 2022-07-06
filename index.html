@@ -6,13 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rocket Blog - WIP</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@300;400;500;700&display=swap');
     </style> 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav>
+            <div class="menuContainer">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
             <img src="images/logo.svg" alt="">
             <div class="navbar-links">
                 <ul>
@@ -24,13 +29,13 @@
             </div>
             <form class="searchForm" action="">
                 <input type="search" placeholder="Buscar" name="search" id="searchField" required>
-                <button type="submit"><img src="images/search.svg" alt=""></button>
+                <button type="submit" id="searchButton"><img src="images/search.svg" alt=""></button>
             </form>
         </nav>
         <section id="intro">
             <div id="intro-desc">
                 <p>Veja o guia definitivo para conquistar seus objetivos como DEV em 2022</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut scelerisque nisl, id convallis augue. Sed elementum tempor arcu, et commodo ipsum vulputate id. Curabitur ac urna a nisl pretium lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac facilisis odio. Quisque mattis diam posuere eros finibus suscipit.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut scelerisque nisl, id convallis augue. Sed elementum tempor arcu, et commodo ipsum vulputate id.</p>
                 <a href="#">Veja mais <img src="images/arrow-right.svg" alt=""></a>
             </div>
             <div id="intro-photo">
@@ -44,20 +49,20 @@
                 <img src="images/post-1.png" alt="">
                 <p>Janeiro 04, 2022</p>
                 <p>Começando no ReactJS em 2022</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut scelerisque nisl, id convallis augue. Sed elementum tempor arcu, et commodo ipsum vulputate id. Curabitur ac urna a nisl pretium lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac facilisis odio. Quisque mattis diam posuere eros finibus suscipit.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut scelerisque nisl, id convallis augue. Sed elementum tempor arcu, et commodo ipsum vulputate id.</p>
             </div>
             <div id="main-photoless">
                 <div class="post no-photo">
                     <img src="images/post-2.png" alt="">
                     <p>Janeiro 04, 2022</p>
                     <p>Conheça as principais técnicas para conseguir uma vaga internacional em programação</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut scelerisque nisl, id convallis augue. Sed elementum tempor arcu, et commodo ipsum vulputate id. Curabitur ac urna a nisl pretium lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac facilisis odio. Quisque mattis diam posuere eros finibus suscipit.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut scelerisque nisl, id convallis augue. Sed elementum tempor arcu, et commodo ipsum vulputate id</p>
                 </div>
                 <div class="post no-photo">
                     <img src="images/post-2.png" alt="">
                     <p>Janeiro 04, 2022</p>
                     <p>Veja a evolução do Front-end na prática</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut scelerisque nisl, id convallis augue. Sed elementum tempor arcu, et commodo ipsum vulputate id. Curabitur ac urna a nisl pretium lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac facilisis odio. Quisque mattis diam posuere eros finibus suscipit.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut scelerisque nisl, id convallis augue. Sed elementum tempor arcu, et commodo ipsum vulputate id</p>
                 </div>
             </div>
         </section>
@@ -85,5 +90,6 @@
     <footer>
         aqui
     </footer>
+    <script type="text/javascript" src="menu.js"></script>
 </body>
 </html>
