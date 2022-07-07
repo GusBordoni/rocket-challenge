@@ -127,6 +127,10 @@ nav input[type=search] {
   transition: width 1s;
 }
 
+nav input[type=search]::-webkit-search-cancel-button {
+    display: none;
+}
+
 .clear-icon {
   display: flex;
   width: 20px;
