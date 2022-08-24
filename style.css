@@ -115,7 +115,7 @@ nav form {
 }
 
 nav input[type=search] {
-  border: none;
+  border: 1px solid transparent;
   border-radius: 5px 0 0 5px;
   padding: 10px;
   background-color: var(--dark-bg);
@@ -124,7 +124,12 @@ nav input[type=search] {
   outline: none;
   font-family: var(--roboto);
   font-size: .9em;
-  transition: width 1s;
+  transition: width 1s, border .3s;
+}
+
+nav input[type=search]:focus-within{
+  border: 1px solid var(--button-bg-transp);
+  transition: width 1s, border .3s;
 }
 
 nav input[type=search]::-webkit-search-cancel-button {
@@ -160,7 +165,14 @@ nav button[type=submit] {
   padding: 10px;
   background-color: var(--button-bg);
   cursor: pointer;
+  transition: background-color .2s;
 }
+
+nav button[type=submit]:hover {
+  background-color: #b174dd;
+  transition: background-color .2s;
+}
+
 /* ------------------------------------------------- */
 
 
